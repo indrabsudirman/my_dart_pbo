@@ -1,18 +1,14 @@
 import 'dart:io';
+import 'package:my_dart_pbo/rectangle.dart';
 
 void main(List<String> arguments) {
   PersegiPanjang persegiPanjang = PersegiPanjang();
-  persegiPanjang.panjang = double.tryParse(stdin.readLineSync()!);
-  persegiPanjang.lebar = double.parse(stdin.readLineSync()!);
+  stdout.write('Nilai panjang: ');
+  persegiPanjang.setPanjang(double.tryParse(stdin.readLineSync()!));
+  stdout.write('Nilai lebar: ');
+  persegiPanjang.lebar = double.tryParse(stdin.readLineSync()!);
 
-  print('Luas Persegi Panjang: ${persegiPanjang.luas()}');
-}
-
-class PersegiPanjang {
-  double? panjang;
-  double? lebar;
-
-  double luas() {
-    return panjang! * lebar!;
-  }
+  print('Panjang: ${persegiPanjang.getPanjang()}');
+  print('Lebar: ${persegiPanjang.lebar}');
+  print('Luas Persegi Panjang: ${persegiPanjang.luas}');
 }
