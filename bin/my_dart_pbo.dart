@@ -1,5 +1,18 @@
-import 'package:my_dart_pbo/my_dart_pbo.dart' as my_dart_pbo;
+import 'dart:io';
 
 void main(List<String> arguments) {
-  print('Hello world: ${my_dart_pbo.calculate()}!');
+  PersegiPanjang persegiPanjang = PersegiPanjang();
+  persegiPanjang.panjang = double.tryParse(stdin.readLineSync()!);
+  persegiPanjang.lebar = double.parse(stdin.readLineSync()!);
+
+  print('Luas Persegi Panjang: ${persegiPanjang.luas()}');
+}
+
+class PersegiPanjang {
+  double? panjang;
+  double? lebar;
+
+  double luas() {
+    return panjang! * lebar!;
+  }
 }
