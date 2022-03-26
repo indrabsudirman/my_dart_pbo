@@ -1,4 +1,3 @@
-import 'package:my_dart_pbo/flying_monster.dart';
 import 'package:my_dart_pbo/hero.dart';
 import 'package:my_dart_pbo/ability_drink_mixin.dart';
 import 'package:my_dart_pbo/knight.dart';

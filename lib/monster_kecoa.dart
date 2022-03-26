@@ -1,5 +1,4 @@
 import 'package:my_dart_pbo/flying_monster.dart';
-import 'package:my_dart_pbo/ability_drink_mixin.dart';
 import 'package:my_dart_pbo/monster.dart';
 
 class MonsterKeCoa extends Monster implements FlyingMonster {
