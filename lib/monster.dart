@@ -1,13 +1,5 @@
-class Monster {
-  int? _healthPoints;
+import 'package:my_dart_pbo/character.dart';
 
-  int get healthPoints => _healthPoints!;
-  set healthPoints(int value) {
-    if (value <= 0) {
-      throw ArgumentError('Health Points harus positif dan tidak boleh kosong');
-    }
-    _healthPoints = value;
-  }
-
-  String eatHuman() => 'Hmmmmm .. I\'m eating human';
+class Monster extends Character {
+  String eatHuman() => 'Hmmmmm ... I\'m eating human';
 }
