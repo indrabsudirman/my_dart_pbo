@@ -26,6 +26,24 @@ void main(List<String> args) {
     print('Value dari list: $bilangan');
   }
 
+  //Merubah list menjadi Set
+  Set<int> setInt;
+  setInt = list.toSet();
+  print('Value dari list ke set adalah: $setInt');
+
+  //Merubah list menjadi Map
+  List<String> listString = [];
+  // list.forEach((bilangan) {
+  //   listString.add(bilangan.toString());
+  // });
+
+  //Dengan Map seperti ini:
+  listString = list.map((e) => 'angka listString map ' + e.toString()).toList();
+
+  listString.forEach((element) {
+    print('Value dari list ke map adalah: $element');
+  });
+
   //Bisa juga seperti ini:
   // list.forEach((bilangan) {
   //   print(bilangan);
